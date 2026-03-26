@@ -1,0 +1,171 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f0f8ff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #1a2e1c;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 72px 24px 48px;
+  background: linear-gradient(180deg, #e8f5ec 0%, #f0f8ff 100%);
+  border-bottom: 1px solid rgba(46, 139, 87, 0.15);
+}
+
+h1 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 400;
+  color: #2e8b57;
+  margin-bottom: 20px;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+
+/* ---- Main Container ---- */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 56px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ---- Label Section ---- */
+.section-label {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #2e8b57;
+  font-weight: 500;
+  margin-bottom: 16px;
+  padding-left: 3px;
+  border-left: 3px solid #2e8b57;
+  padding-left: 10px;
+}
+
+/* ---- About Card ---- */
+.about-card {
+  background: #fff;
+  border: 1px solid rgba(46, 139, 87, 0.18);
+  border-radius: 16px;
+  padding: 32px 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-card::before {
+  position: absolute;
+  top: -10px;
+  right: 24px;
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 120px;
+  color: rgba(46, 139, 87, 0.07);
+  line-height: 1;
+}
+
+.about-card p {
+  line-height: 1.85;
+  color: #2a3d2c;
+  font-size: 16px;
+}
+
+.about-card strong {
+  color: #2e8b57;
+  font-weight: 500;
+}
+
+/* ---- Hobbies Section ---- */
+.hobbies-section {
+  display: flex;
+  flex-direction: column;
+}
+
+ol {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+ol li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  border: 1px solid rgba(46, 139, 87, 0.15);
+  border-radius: 14px;
+  padding: 20px 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+}
+
+ol li:hover {
+  transform: translateX(6px);
+  box-shadow: -4px 0 0 0 #2e8b57;
+  border-color: rgba(46, 139, 87, 0.35);
+}
+
+.hobby-icon {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 22px;
+  color: #ff0000;
+  min-width: 36px;
+  text-align: center;
+  font-style: italic;
+}
+
+.hobby-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.hobby-text strong {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a2e1c;
+}
+
+.hobby-text span {
+  font-size: 13px;
+  color: #7a9b7d;
+}
+
+/* ---- Footer ---- */
+footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 24px;
+  font-size: 13px;
+  color: #7a9b7d;
+  border-top: 1px solid rgba(46, 139, 87, 0.1);
+  letter-spacing: 0.3px;
+}
+
+/* ---- Responsif pada Mobile ---- */
+@media (max-width: 480px) {
+  .about-card { 
+    padding: 24px 20px; 
+  }
+  h1 { 
+    font-size: 2rem; 
+}
+}
